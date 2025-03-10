@@ -44,7 +44,7 @@ function validatePath(path) {
         throw new Error("path must be defined");
     }
     ;
-    if (typeof path === "string") {
+    if (typeof path !== "string") {
         throw new Error("path must be string");
     }
     ;
