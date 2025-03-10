@@ -1,11 +1,11 @@
 export const torrentFile {
     path: string;
-    length: number;
+    size: number;
 }
 
 export const torrentInfo {
     name: string;
-    length: number;
+    size: number;
     files: torrentFile[];
     pieces: string;
     pieceLength: number;
