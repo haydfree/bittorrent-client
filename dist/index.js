@@ -32,6 +32,7 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
+var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
 const bencode = __importStar(require("@thi.ng/bencode"));
@@ -53,10 +54,12 @@ if (!announceUrl || !announceUrl.hostname || !announceUrl.port) {
     console.error('Invalid announce URL');
     process.exit(1);
 }
+const hostname = (_a = announceUrl === null || announceUrl === void 0 ? void 0 : announceUrl.hostname) !== null && _a !== void 0 ? _a : "HOST_NAME_ERROR";
+const port = (_b = announceUrl === null || announceUrl === void 0 ? void 0 : announceUrl.port) !== null && _b !== void 0 ? _b : "PORT_ERROR";
 const socket = dgram.createSocket('udp4');
 socket.bind(() => {
     const msg = buffer_1.Buffer.from('hello', 'utf8');
-    socket.send(msg, 0, msg.length, parseInt(announceUrl.port, 10), announceUrl.hostname, (err) => {
+    socket.send(msg, 0, msg.length, parseInt(port, 10), hostname, (err) => {
         if (err) {
             console.error('Error sending message:', err);
         }
