@@ -35,8 +35,4 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
 const torrentFilePath = './big-buck-bunny.torrent';
-if (!fs.existsSync(torrentFilePath)) {
-    console.error(`Torrent file not found: ${torrentFilePath}`);
-    process.exit(1);
-}
 console.log(fs.readFileSync(torrentFilePath));
