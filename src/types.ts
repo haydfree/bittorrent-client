@@ -16,3 +16,5 @@ export const torrentInfo = {
     announce: string
 }
 
+console.log(torrentInfo.name);
+
