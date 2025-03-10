@@ -9,7 +9,6 @@ handle_changes() {
     git add .
     git commit -m "Auto commit: $(date)"
     git push origin main
-    docker-compose restart client server db
 }
 
 export -f handle_changes
