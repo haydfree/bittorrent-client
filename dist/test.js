@@ -33,10 +33,16 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs = __importStar(require("fs"));
-const torrentFilePath = './big-buck-bunny.torrent';
-if (!fs.existsSync(torrentFilePath)) {
-    console.error(`Torrent file not found: ${torrentFilePath}`);
-    process.exit(1);
+const assert = __importStar(require("assert"));
+from;
+"types.ts";
+function verifyAllPropsValidTorrent(torrent) {
+    for (const key in torrent) {
+        const value = torrent[key];
+        assert(value !== null && value !== undefined);
+    }
 }
-console.log(fs.readFileSync(torrentFilePath));
+function verifyAllPropsTypesMatchTorrent(torrent) {
+    if (typeof )
+        ;
+}
