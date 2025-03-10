@@ -13,5 +13,5 @@ const msg: Buffer = buffer.Buffer.from("hello", "utf8");
 
 async socket.send(msg, 0, msg.length, urlStr.port, urlStr.host, () => {});
 socket.on("message", (msg: Buffer) => {
-    await console.log(`message is: ${msg}`);
+    console.log(`message is: ${msg}`);
 });
