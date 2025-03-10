@@ -22,4 +22,4 @@ const torrentBytes = fs.readFileSync(torrentFilePath);
 const torrentDecoded = bencode.decode(torrentBytes, false);
 const announceStr = torrentDecoded.announce.toString("utf-8");
 
-console.log(announceStr);
+const 
