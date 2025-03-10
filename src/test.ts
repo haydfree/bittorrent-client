@@ -6,5 +6,5 @@ import * as url from 'url';
 import * from jest;
 
 it("verifies a null path throws an error", () => {
-    expect(validatePath(null)).toThrow();
+    expect(validatePath(null)).toThrow("path must be non-null");
 });
