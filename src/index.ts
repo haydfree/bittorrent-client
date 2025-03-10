@@ -18,7 +18,7 @@ if (!torrentData.announce || typeof torrentData.announce !== 'string') {
 }
 
 const announceUrl = url.parse(torrentData.announce);
-const hostname = announceUrl?.hostname?? "HOST_NAME_ERROR";
+const hostname = announceUrl?.hostname ?? "HOST_NAME_ERROR";
 const port = announceUrl?.port ?? "HOST_NAME_ERROR";
 if (!announceUrl || !announceUrl.hostname || !announceUrl.port) {
     console.error('Invalid announce URL');
