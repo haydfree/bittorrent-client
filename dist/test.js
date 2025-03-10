@@ -4,6 +4,7 @@ const index_1 = require("./index");
 //@ts-ignore
 function testValidatePath() {
     try {
+        //@ts-ignore
         (0, index_1.validatePath)(null);
         console.error("validate path null failed");
     }
