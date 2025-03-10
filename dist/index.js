@@ -58,5 +58,5 @@ catch (err) {
     process.exit(1);
 }
 const torrentBytes = fs.readFileSync(torrentFilePath);
-const torrentStr = torrentBytes.toString("utf-8");
-console.log(torrentStr);
+const announceStr = torrentBytes.announce.toString("utf-8");
+console.log(announceStr);
