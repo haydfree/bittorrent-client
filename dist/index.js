@@ -49,7 +49,7 @@ if (!torrentData.announce || typeof torrentData.announce !== 'string') {
     process.exit(1);
 }
 const announceUrl = url.parse(torrentData.announce);
-if (!announceUrl.hostname || !announceUrl.port) {
+if (!announceUrl || !announceUrl.hostname || !announceUrl.port) {
     console.error('Invalid announce URL');
     process.exit(1);
 }
