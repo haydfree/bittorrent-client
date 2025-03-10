@@ -12,7 +12,7 @@ function verifyAllPropsValidTorrentFile(torrentFile: TorrentFile) {
     assert(torrentFile.length !== null && torrentFile.length !== undefined); 
 }
 
-function verifyAllPropsValidTorrentFile(torrentFile: TorrentFile) {
+function verifyAllPropsValidTorrentInfo(torrentFile: TorrentFile) {
 
 }
 
