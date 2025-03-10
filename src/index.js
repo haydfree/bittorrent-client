@@ -1,4 +1,4 @@
 
 
 
-const path = "./big-buck-bunny.torrent;
+const path = "./big-buck-bunny.torrent";
