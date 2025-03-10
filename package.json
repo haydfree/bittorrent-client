@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/haydfree/bittorrent-client#readme",
   "devDependencies": {
-    "bencode": "^4.0.0"
+    "@types/node": "^22.13.10",
+    "bencode": "^4.0.0",
+    "typescript": "^5.8.2"
   }
 }
