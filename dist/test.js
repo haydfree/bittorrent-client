@@ -5,18 +5,15 @@ function testValidatePath() {
         validatePath(null);
         console.error("validate path null failed");
     }
-    finally {
-    }
+    catch (_a) { }
     try {
         validatePath(undefined);
         console.error("validate path undefined failed");
     }
-    finally {
-    }
+    catch (_b) { }
     try {
         validatePath(123);
         console.error("validate path non-string failed");
     }
-    finally {
-    }
+    catch (_c) { }
 }
