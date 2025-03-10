@@ -37,6 +37,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
+const bencode = __importStar(require("@thi.ng/bencode"));
 const assert_1 = __importDefault(require("assert"));
 function verifyAllPropsValidTorrentFile(torrentFile) {
     (0, assert_1.default)(torrentFile.path !== null && torrentFile.path !== undefined);
@@ -82,7 +83,7 @@ function verifyAllPropsTypesMatchTorrent(torrent) {
 }
 const filePath = "./big-buck-bunny.torrent";
 const torrentBytes = fs.readFileSync(filePath);
-console.log(torrentBytes);
+console.log(bencode.decode(torrentBytes, false));
 //verifyAllPropsValidTorrentFile();
 //verifyAllPropsValidTorrentInfo();
 //verifyAllPropsValidTorrent();
