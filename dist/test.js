@@ -14,11 +14,11 @@ function verifyAllPropsValidTorrent(torrent) {
     (0, assert_1.default)(torrent.urlList !== null && torrent.urlList !== undefined);
 }
 function verifyAllPropsTypesMatchTorrent(torrent) {
-    (0, assert_1.default)(typeof torrent.info == types_1.TorrentInfo);
-    (0, assert_1.default)(typeof torrent.creationDate == number);
-    (0, assert_1.default)(typeof torrent.createdBy == string);
-    (0, assert_1.default)(typeof torrent.comment == string);
-    (0, assert_1.default)(typeof torrent.announce == string);
-    (0, assert_1.default)(typeof torrent.announceList == string[][]);
-    (0, assert_1.default)(typeof torrent.urlList == string[]);
+    (0, assert_1.default)(typeof torrent.info === "TorrentInfo");
+    (0, assert_1.default)(typeof torrent.creationDate === "number");
+    (0, assert_1.default)(typeof torrent.createdBy === "string");
+    (0, assert_1.default)(typeof torrent.comment === "string");
+    (0, assert_1.default)(typeof torrent.announce === "string");
+    (0, assert_1.default)(Array.isArray(torrent.announceList) && torrent.announceList.every(item => Array.isArray(item) && item.every(subItem => typeof subItem === "string")));
+    (0, assert_1.default)(Array.isArray(torrent.urlList) && torrent.urlList.every(item => typeof item === "string"));
 }
