@@ -5,9 +5,11 @@ PROJECT_DIR="."
 cd "$PROJECT_DIR" || { echo "Project directory not found!"; exit 1; }
 
 handle_changes() {
+    echo "Changes detected. Committing and restarting services..."
     git add .
     git commit -m "Auto commit: $(date)"
     git push origin main
+    docker-compose restart client server db
 }
 
 export -f handle_changes
