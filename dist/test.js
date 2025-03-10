@@ -4,6 +4,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const assert_1 = __importDefault(require("assert"));
+function verifyAllPropsValidTorrentFile(torrentFile) {
+    (0, assert_1.default)(torrentFile.path !== null && torrentFile.path !== undefined);
+    (0, assert_1.default)(torrentFile.length !== null && torrentFile.length !== undefined);
+}
+function verifyAllPropsValidTorrentInfo(torrentInfo) {
+    (0, assert_1.default)(torrentInfo.name !== null && torrentInfo.name !== undefined);
+    (0, assert_1.default)(torrentInfo.length !== null && torrentInfo.length !== undefined);
+    (0, assert_1.default)(torrentInfo.files !== null && torrentInfo.files !== undefined);
+    (0, assert_1.default)(torrentInfo.pieceLength !== null && torrentInfo.pieceLength !== undefined);
+    (0, assert_1.default)(torrentInfo.pieces !== null && torrentInfo.pieces !== undefined);
+    (0, assert_1.default)(torrentInfo.private !== null && torrentInfo.private !== undefined);
+}
 function verifyAllPropsValidTorrent(torrent) {
     (0, assert_1.default)(torrent.info !== null && torrent.info !== undefined);
     (0, assert_1.default)(torrent.creationDate !== null && torrent.creationDate !== undefined);
