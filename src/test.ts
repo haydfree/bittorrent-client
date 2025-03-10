@@ -8,10 +8,8 @@ import * as assert from "assert";
 import Torrent, TorrentInfo, TorrentFile from "types.ts";
 
 function verifyAllPropsPresentTorrent(torrent: Torrent) {
-    if (!torrent.info || !torrent.creationDate || !torrent.createdBy || !torrent.comment || !torrent.announce || !torrent.announceList || !torrent.urlList) {
-        return false;
-    } else {
-        return true;
+    for (const key in torrent) {
+        const value = torrent[key];
     }
 }
 
