@@ -14,7 +14,7 @@ function verifyAllPropsValidTorrent(torrent) {
     (0, assert_1.default)(torrent.urlList !== null && torrent.urlList !== undefined);
 }
 function verifyAllPropsTypesMatchTorrent(torrent) {
-    (0, assert_1.default)(typeof torrent.info === "TorrentInfo");
+    (0, assert_1.default)(torrent.info instanceof types_1.TorrentInfo);
     (0, assert_1.default)(typeof torrent.creationDate === "number");
     (0, assert_1.default)(typeof torrent.createdBy === "string");
     (0, assert_1.default)(typeof torrent.comment === "string");
