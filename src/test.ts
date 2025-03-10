@@ -19,10 +19,10 @@ function verifyAllPropsValidTorrent(torrent: Torrent) {
 
 function verifyAllPropsTypesMatchTorrent(torrent: Torrent) {
     assert(typeof torrent.info == TorrentInfo);
-    assert(typeof torrent.creationDate == TorrentInfo);
-    assert(typeof torrent.createdBy == TorrentInfo);
-    assert(typeof torrent.comment == TorrentInfo);
-    assert(typeof torrent.announce == TorrentInfo);
-    assert(typeof torrent.announceList == TorrentInfo);
-    assert(typeof torrent.urlList == TorrentInfo);
+    assert(typeof torrent.creationDate == number);
+    assert(typeof torrent.createdBy == string);
+    assert(typeof torrent.comment == string);
+    assert(typeof torrent.announce == string);
+    assert(typeof torrent.announceList == string[][]);
+    assert(typeof torrent.urlList == string[]);
 }
