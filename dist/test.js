@@ -6,6 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const assert_1 = __importDefault(require("assert"));
 function verifyAllPropsValidTorrent(torrent) {
     (0, assert_1.default)(torrent.info !== null && torrent.info !== undefined);
+    (0, assert_1.default)(torrent.creationDate !== null && torrent.creationDate !== undefined);
+    (0, assert_1.default)(torrent.createdBy !== null && torrent.createdBy !== undefined);
+    (0, assert_1.default)(torrent.comment !== null && torrent.comment !== undefined);
+    (0, assert_1.default)(torrent.announce !== null && torrent.announce !== undefined);
+    (0, assert_1.default)(torrent.announceList !== null && torrent.announceList !== undefined);
+    (0, assert_1.default)(torrent.urlList !== null && torrent.urlList !== undefined);
 }
 function verifyAllPropsTypesMatchTorrent(torrent) {
 }
