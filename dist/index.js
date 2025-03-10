@@ -34,43 +34,8 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
-const bencode = __importStar(require("@thi.ng/bencode"));
-const dgram = __importStar(require("dgram"));
-const buffer_1 = require("buffer");
-const url = __importStar(require("url"));
 const torrentFilePath = './big-buck-bunny.torrent';
 if (!fs.existsSync(torrentFilePath)) {
     console.error(`Torrent file not found: ${torrentFilePath}`);
     process.exit(1);
 }
-const torrentData = bencode.decode(fs.readFileSync(torrentFilePath), false);
-if (!torrentData.announce || typeof torrentData.announce !== 'string') {
-    console.error('Invalid or missing "announce" field in torrent data');
-    process.exit(1);
-}
-const announceUrl = url.parse(torrentData.announce);
-if (!announceUrl || !announceUrl.hostname || !announceUrl.port ||
-    typeof announceUrl !== "string" || typeof announceUrl.hostname !== "string" || typeof announceUrl.port !== "string") {
-    console.error('Invalid announce URL');
-    process.exit(1);
-}
-const socket = dgram.createSocket('udp4');
-socket.bind(() => {
-    const msg = buffer_1.Buffer.from('hello', 'utf8');
-    socket.send(msg, 0, msg.length, parseInt(announceUrl.port, 10), announceUrl.hostname, (err) => {
-        if (err) {
-            console.error('Error sending message:', err);
-        }
-        else {
-            console.log('Message sent successfully');
-        }
-        socket.close();
-    });
-});
-socket.on('message', (msg) => {
-    console.log(`Received message: ${msg.toString()}`);
-});
-socket.on('error', (err) => {
-    console.error(`Socket error: ${err.stack}`);
-    socket.close();
-});
