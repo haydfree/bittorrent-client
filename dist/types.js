@@ -1,13 +1,3 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.torrentInfo = exports.string = exports.torrentFile = void 0;
-size: number;
-size: number;
-files: exports.torrentFile[];
-pieces: exports.string;
-pieceLength: number;
-private: boolean;
-creationDate: number;
-createdBy: exports.string;
-comment: exports.string;
-announce: exports.string;
+exports.boolean = exports. = exports.torrentInfo = exports.number = exports.string = exports.torrentFile = void 0;
