@@ -34,5 +34,8 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
+function validatePath() {
+}
 const torrentFilePath = './big-buck-bunny.torrent';
 console.log(fs.readFileSync(torrentFilePath));
+module.exports = validatePath;
