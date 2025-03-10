@@ -58,6 +58,7 @@ catch (err) {
     console.error("path invalid");
     process.exit(1);
 }
-const torrentBytes = bencode.decode(fs.readFileSync(torrentFilePath), false).announce;
-//const announceStr = torrentBytes.announce.toString("utf-8");
-console.log(torrentBytes);
+const torrentBytes = fs.readFileSync(torrentFilePath);
+const torrentDecoded = bencode.decode(torrentBytes, false);
+const announceStr = torrentDecoded.announce.toString("utf-8");
+console.log(announceStr);
