@@ -57,6 +57,6 @@ catch (err) {
     console.error("path invalid");
     process.exit(1);
 }
-const torrentBytes = fs.readFileSync(torrentFilePath);
+const torrentBytes = fs.readFileSync(torrentFilePath).announce;
 //const announceStr = torrentBytes.announce.toString("utf-8");
 console.log(torrentBytes);
