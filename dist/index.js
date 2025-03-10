@@ -35,7 +35,7 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validatePath = validatePath;
 const fs = __importStar(require("fs"));
-function validatePath() {
+function validatePath(path) {
     if (path === null) {
         throw new Error("path must be non-null");
     }
