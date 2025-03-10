@@ -7,8 +7,8 @@ export const torrentInfo {
     name: string;
     length: number;
     files: torrentFile[];
-    pieceLength: number;
     pieces: string;
+    pieceLength: number;
     creationDate: number;
     createdBy: string;
     comment: string;
