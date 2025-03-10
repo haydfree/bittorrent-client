@@ -1,0 +1,28 @@
+{
+  "name": "bittorrent-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/tsc; node ./dist/test.js",
+    "dev": "./node_modules/.bin/tsc; node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haydfree/bittorrent-client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/haydfree/bittorrent-client/issues"
+  },
+  "homepage": "https://github.com/haydfree/bittorrent-client#readme",
+  "devDependencies": {
+    "@thi.ng/bencode": "^3.0.10",
+    "@types/node": "^22.13.10",
+    "jest": "^29.7.0",
+    "typescript": "^5.8.2"
+  }
+}
