@@ -33,9 +33,18 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.validatePath = validatePath;
 const fs = __importStar(require("fs"));
 function validatePath() {
+    if (path === null) {
+        throw new Error("path must be non-null");
+        if (path === undefined) {
+            throw new Error("path must be defined");
+            if (typeof path === "string") {
+                throw new Error("path must be string");
+            }
+            const torrentFilePath = './big-buck-bunny.torrent';
+            console.log(fs.readFileSync(torrentFilePath));
+        }
+    }
 }
-const torrentFilePath = './big-buck-bunny.torrent';
-console.log(fs.readFileSync(torrentFilePath));
-module.exports = validatePath;
