@@ -33,32 +33,9 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.validatePath = validatePath;
 const fs = __importStar(require("fs"));
 const bencode = __importStar(require("@thi.ng/bencode"));
-function validatePath(path) {
-    if (path === null) {
-        throw new Error("path must be non-null");
-    }
-    ;
-    if (path === undefined) {
-        throw new Error("path must be defined");
-    }
-    ;
-    if (typeof path !== "string") {
-        throw new Error("path must be string");
-    }
-    ;
-}
 const torrentFilePath = './big-buck-bunny.torrent';
-try {
-    validatePath(torrentFilePath);
-}
-catch (err) {
-    console.error("path invalid");
-    process.exit(1);
-}
 const torrentBytes = fs.readFileSync(torrentFilePath);
 const torrentDecoded = bencode.decode(torrentBytes, false);
 const announceStr = torrentDecoded.announce.toString("utf-8");
-console.log(announceStr);
