@@ -46,3 +46,9 @@ function verifyAllPropsTypesMatchTorrent(torrent) {
     (0, assert_1.default)(Array.isArray(torrent.announceList) && torrent.announceList.every(item => Array.isArray(item) && item.every(subItem => typeof subItem === "string")));
     (0, assert_1.default)(Array.isArray(torrent.urlList) && torrent.urlList.every(item => typeof item === "string"));
 }
+verifyAllPropsValidTorrentFile();
+verifyAllPropsValidTorrentInfo();
+verifyAllPropsValidTorrent();
+verifyAllPropsTypesMatchTorrentFile();
+verifyAllPropsTypesMatchTorrentInfo();
+verifyAllPropsTypesMatchTorrent();
