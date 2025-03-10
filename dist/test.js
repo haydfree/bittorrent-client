@@ -41,6 +41,4 @@ function verifyAllPropsValidTorrent(torrent) {
     }
 }
 function verifyAllPropsTypesMatchTorrent(torrent) {
-    if (typeof )
-        ;
 }
