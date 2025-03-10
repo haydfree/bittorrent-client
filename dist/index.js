@@ -59,4 +59,4 @@ catch (err) {
 }
 const torrentBytes = fs.readFileSync(torrentFilePath);
 const announceStr = torrentBytes.announce.toString("utf-8");
-console.log(announceStr);
+console.log(torrentBytes);
