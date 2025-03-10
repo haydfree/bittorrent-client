@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/haydfree/bittorrent-client/issues"
   },
-  "homepage": "https://github.com/haydfree/bittorrent-client#readme"
+  "homepage": "https://github.com/haydfree/bittorrent-client#readme",
+  "devDependencies": {
+    "bencode": "^4.0.0"
+  }
 }
