@@ -18,11 +18,11 @@ function verifyAllPropsValidTorrent(torrent: Torrent) {
 }
 
 function verifyAllPropsTypesMatchTorrent(torrent: Torrent) {
-    assert(typeof torrent.info == TorrentInfo);
-    assert(typeof torrent.creationDate == number);
-    assert(typeof torrent.createdBy == string);
-    assert(typeof torrent.comment == string);
-    assert(typeof torrent.announce == string);
-    assert(typeof torrent.announceList == string[][]);
+    assert(typeof torrent.info === TorrentInfo);
+    assert(typeof torrent.creationDate === number);
+    assert(typeof torrent.createdBy === string);
+    assert(typeof torrent.comment === string);
+    assert(typeof torrent.announce === string);
+    assert(typeof torrent.announceList === string[][]);
     assert(Array.isArray(torrent.urlList) && torrent.urlList.every((item) => typeof item === "string");
 }
