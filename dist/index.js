@@ -35,6 +35,7 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validatePath = validatePath;
 const fs = __importStar(require("fs"));
+const bencode = __importStar(require("@thi.ng/bencode"));
 function validatePath(path) {
     if (path === null) {
         throw new Error("path must be non-null");
@@ -57,6 +58,6 @@ catch (err) {
     console.error("path invalid");
     process.exit(1);
 }
-const torrentBytes = fs.readFileSync(torrentFilePath).announce;
+const torrentBytes = bencode.decode(fs.readFileSync(torrentFilePath)).announce;
 //const announceStr = torrentBytes.announce.toString("utf-8");
 console.log(torrentBytes);
