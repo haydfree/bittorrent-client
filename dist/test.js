@@ -26,7 +26,7 @@ function verifyAllPropsTypesMatchTorrentInfo(torrentInfo) {
     (0, assert_1.default)(typeof torrentInfo.private === "boolean");
 }
 function verifyAllPropsTypesMatchTorrent(torrent) {
-    (0, assert_1.default)(torrent.info);
+    (0, assert_1.default)(verifyAllPropsTypesMatchTorrentInfo(torrent.info));
     (0, assert_1.default)(typeof torrent.creationDate === "number");
     (0, assert_1.default)(typeof torrent.createdBy === "string");
     (0, assert_1.default)(typeof torrent.comment === "string");
