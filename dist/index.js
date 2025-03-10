@@ -50,6 +50,13 @@ function validatePath(path) {
     ;
 }
 const torrentFilePath = './big-buck-bunny.torrent';
+try {
+    validatePath(torrentFilePath);
+}
+catch (err) {
+    console.error("path invalid");
+    process.exit(1);
+}
 const torrentBytes = fs.readFileSync(torrentFilePath);
 const torrentStr = torrentBytes.toString("utf-8");
 console.log(torrentStr);
