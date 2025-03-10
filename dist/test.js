@@ -83,7 +83,7 @@ function verifyAllPropsTypesMatchTorrent(torrent) {
 }
 const filePath = "./big-buck-bunny.torrent";
 const torrentBytes = fs.readFileSync(filePath);
-console.log(bencode.decode(torrentBytes, false));
+console.log(bencode.decode(torrentBytes, false).toString("utf-8"));
 //verifyAllPropsValidTorrentFile();
 //verifyAllPropsValidTorrentInfo();
 //verifyAllPropsValidTorrent();
