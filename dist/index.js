@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validatePath = validatePath;
+//@ts-ignore
 function validatePath(path) {
     if (path === null) {
         throw new Error("path must be non-null");
