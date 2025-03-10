@@ -35,7 +35,10 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
 const bencode = __importStar(require("@thi.ng/bencode"));
+const url = __importStar(require("url"));
 const torrentFilePath = './big-buck-bunny.torrent';
 const torrentBytes = fs.readFileSync(torrentFilePath);
 const torrentDecoded = bencode.decode(torrentBytes, false);
 const announceStr = torrentDecoded.announce.toString("utf-8");
+const urlStr = url.parse(announceStr);
+console.log(urlStr);
