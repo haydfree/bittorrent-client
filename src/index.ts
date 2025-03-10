@@ -22,8 +22,6 @@ if (!announceUrl || !announceUrl.hostname || !announceUrl.port) {
     console.error('Invalid announce URL');
     process.exit(1);
 }
-const hostname = announceUrl?.hostname ?? "HOST_NAME_ERROR";
-const port = announceUrl?.port ?? "PORT_ERROR";
 
 const socket = dgram.createSocket('udp4');
 
