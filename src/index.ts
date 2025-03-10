@@ -18,7 +18,7 @@ try {
     process.exit(1);
 }
 
-const torrentBytes = bencode.decode(fs.readFileSync(torrentFilePath)).announce;
+const torrentBytes = bencode.decode(fs.readFileSync(torrentFilePath), false).announce;
 //const announceStr = torrentBytes.announce.toString("utf-8");
 
 console.log(torrentBytes);
