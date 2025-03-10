@@ -9,7 +9,8 @@ const torrentStr = torrent.announce.toString("utf-8");
 const urlStr = url.parse(torrentStr);
 const socket = dgram.createSocket("udp4");
 const msg = buffer.Buffer.from("hello", "utf8");
+async;
 socket.send(msg, 0, msg.length, urlStr.port, urlStr.host, () => { });
 socket.on("message", (msg) => {
-    console.log(`message is: ${msg}`);
+    yield console.log(`message is: ${msg}`);
 });
