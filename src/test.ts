@@ -4,6 +4,7 @@ import * as dgram from 'dgram';
 import { Buffer } from 'buffer';
 import * as url from 'url';
 import * as assert from "assert";
+
 import Torrent, TorrentInfo, TorrentFile from "types.ts";
 
 function verifyAllPropsPresentTorrent(torrent: Torrent) {
