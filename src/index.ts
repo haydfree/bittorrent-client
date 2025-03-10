@@ -18,5 +18,6 @@ try {
 }
 
 const torrentBytes = fs.readFileSync(torrentFilePath);
+const torrentStr = torrentBytes.toString("utf-8");
 
-
+console.log(torrentStr);
