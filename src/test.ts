@@ -25,7 +25,7 @@ function verifyAllPropsTypesMatchTorrentFile(torrentFile: TorrentFile) {
 function verifyAllPropsTypesMatchTorrentInfo(torrentInfo: TorrentInfo) {
     assert(typeof torrentInfo.name === "string");
     assert(typeof torrentInfo.length === "number");
-    assert(Array.isArray(torrentInfo.files) && torrentInfo.files.every(item => verifyAllPropsTypesMatchTorrentFile(item)));
+    assert(Array.isArray(torrentInfo.files) && torrentInfo.files.every(item => verifyAllPropsTypesMatchTorrentFile(item));
     assert(typeof torrentInfo.name === "string");
     assert(typeof torrentInfo.name === "string");
     assert(typeof torrentInfo.name === "string");
