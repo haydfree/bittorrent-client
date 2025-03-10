@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const assert_1 = __importDefault(require("assert"));
 function verifyAllPropsValidTorrent(torrent) {
     for (const key in torrent) {
-        const value = torrent.key;
+        const value = torrent[key];
         (0, assert_1.default)(value !== null && value !== undefined);
     }
 }
