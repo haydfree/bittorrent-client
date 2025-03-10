@@ -41,17 +41,15 @@ const bencode = __importStar(require("@thi.ng/bencode"));
 const assert_1 = __importDefault(require("assert"));
 function verifyAllPropsValidTorrentFile(torrentFile) {
     (0, assert_1.default)(torrentFile.path !== null && torrentFile.path !== undefined);
-    (0, assert_1.default)(torrentFile.length !== null && torrentFile.length !== undefined);
-}
-function verifyAllPropsValidTorrentInfo(torrentInfo) {
-    (0, assert_1.default)(torrentInfo.name !== null && torrentInfo.name !== undefined);
-    (0, assert_1.default)(torrentInfo.length !== null && torrentInfo.length !== undefined);
-    (0, assert_1.default)(torrentInfo.files !== null && torrentInfo.files !== undefined);
-    (0, assert_1.default)(torrentInfo.pieceLength !== null && torrentInfo.pieceLength !== undefined);
-    (0, assert_1.default)(torrentInfo.pieces !== null && torrentInfo.pieces !== undefined);
-    (0, assert_1.default)(torrentInfo.private !== null && torrentInfo.private !== undefined);
+    (0, assert_1.default)(torrentFile.size !== null && torrentFile.size !== undefined);
 }
 function verifyAllPropsValidTorrent(torrent) {
+    (0, assert_1.default)(torrent.name !== null && torrent.name !== undefined);
+    (0, assert_1.default)(torrent.size !== null && torrent.size !== undefined);
+    (0, assert_1.default)(torrent.files !== null && torrent.files !== undefined);
+    (0, assert_1.default)(torrent.pieceLength !== null && torrent.pieceLength !== undefined);
+    (0, assert_1.default)(torrent.pieces !== null && torrent.pieces !== undefined);
+    (0, assert_1.default)(torrent.private !== null && torrent.private !== undefined);
     (0, assert_1.default)(torrent.info !== null && torrent.info !== undefined);
     (0, assert_1.default)(torrent.creationDate !== null && torrent.creationDate !== undefined);
     (0, assert_1.default)(torrent.createdBy !== null && torrent.createdBy !== undefined);
@@ -61,18 +59,16 @@ function verifyAllPropsValidTorrent(torrent) {
     (0, assert_1.default)(torrent.urlList !== null && torrent.urlList !== undefined);
 }
 function verifyAllPropsTypesMatchTorrentFile(torrentFile) {
-    (0, assert_1.default)(Array.isArray(torrentFile.path) && torrentFile.path.every(item => typeof item === "string"));
+    (0, assert_1.default)(typeof torrentFile.path === "string");
     (0, assert_1.default)(typeof torrentFile.length === "number");
 }
-function verifyAllPropsTypesMatchTorrentInfo(torrentInfo) {
-    (0, assert_1.default)(typeof torrentInfo.name === "string");
-    (0, assert_1.default)(typeof torrentInfo.length === "number");
-    (0, assert_1.default)(Array.isArray(torrentInfo.files) && torrentInfo.files.every(item => verifyAllPropsTypesMatchTorrentFile(item)));
-    (0, assert_1.default)(typeof torrentInfo.pieceLength === "number");
-    (0, assert_1.default)(typeof torrentInfo.pieces === "string");
-    (0, assert_1.default)(typeof torrentInfo.private === "boolean");
-}
 function verifyAllPropsTypesMatchTorrent(torrent) {
+    (0, assert_1.default)(typeof torrent.name === "string");
+    (0, assert_1.default)(typeof torrent.size === "number");
+    (0, assert_1.default)(Array.isArray(torrent.files) && torrent.files.every(item => verifyAllPropsTypesMatchTorrentFile(item)));
+    (0, assert_1.default)(typeof torrent.pieceLength === "number");
+    (0, assert_1.default)(typeof torrent.pieces === "string");
+    (0, assert_1.default)(typeof torrent.private === "boolean");
     (0, assert_1.default)(verifyAllPropsTypesMatchTorrentInfo(torrent.info));
     (0, assert_1.default)(typeof torrent.creationDate === "number");
     (0, assert_1.default)(typeof torrent.createdBy === "string");
