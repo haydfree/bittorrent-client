@@ -18,6 +18,5 @@ try {
 }
 
 const torrentBytes = fs.readFileSync(torrentFilePath);
-console.log(fs.readFileSync(torrentFilePath));
 
 
