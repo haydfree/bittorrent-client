@@ -29,7 +29,7 @@ const socket = dgram.createSocket('udp4');
 socket.bind(() => {
     const msg: Buffer = Buffer.from('hello', 'utf8');
 
-    socket.send(msg, 0, msg.length, parseInt(port, 10), hostname, (err) => {
+    socket.send(msg, 0, msg.length, parseInt(announceUrl.port, 10), announceUrl.hostname, (err) => {
         if (err) {
             console.error('Error sending message:', err);
         } else {
