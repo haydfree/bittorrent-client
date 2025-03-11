@@ -5,4 +5,5 @@ const filePath = "./big-buck-bunny.torrent"
 const decodedTorrent = parser.decode(filePath);
 const encodedTorrent = parser.encode(decodedTorrent);
 
-console.log(encoded);
+console.log(decodedTorrent);
+console.log(encodedTorrent);
