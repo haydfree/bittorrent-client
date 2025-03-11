@@ -7,5 +7,5 @@ const torrent = fs.readFileSync(filePath);
 const decodedTorrent = parser.decode(torrent);
 const encodedTorrent = parser.encode(decodedTorrent);
 
-const hash = parser.infoHash(torrent);
-console.log(hash);
+const hash = parser.infoHash(decodedTorrent);
+console.log(decodedTorrent.info);
