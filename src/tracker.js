@@ -70,7 +70,6 @@ function buildAnnounceReq(connectionId, torrent, port=6881) {
     buf.writeUInt16BE(port, 96);
 
     return buf;
-    
 }
 
 function parseAnnounceResp() {
