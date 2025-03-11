@@ -4,3 +4,7 @@ const tracker = require("./tracker");
 
 const filePath = "./big-buck-bunny.torrent"
 const torrent = fs.readFileSync(filePath);
+
+tracker.getPeers(torrent, peers => {
+    console.log(`peers: ${peers}`);
+});
