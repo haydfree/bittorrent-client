@@ -54,6 +54,20 @@ function parseConnResp() {
 
 function buildAnnounceReq(connectionId, torrent, port=6881) {
     const buf = buffer.Buffer.allocUnsafe(98);  
+
+    connectionId.copy(buf, 0);
+    buf.write32UIntBE(1, 8);
+    crypto.randomBytes(4).copy(buf, 12);
+    torrentParser.infoHash(torrent).copy(buf, 16);
+    util.genId().copy(buf, 36);
+    buffer.Buffer.alloc(8).copy(buf, 56);
+    torrentParser.size(torrent).copy(buf, 64);
+    buffer.Buffer.alloc(8).copy(buf, 72);
+    buf.writeUInt32BE(0, 80);
+    buf.writeUInt32BE(0, 80);
+    crypto.randomBytes(4).copy(buf, 88);
+    buf.writeInt32BE(-1, 92);
+    
 }
 
 function parseAnnounceResp() {
