@@ -17,5 +17,6 @@ export function size(torrent) {
 export function infoHash(torrent) {
     const info = torrent.info;
     const encodedInfo = encode(info);
+    console.log(encodedInfo);
     crypto.createHash("sha1").update(encodedInfo).digest();
 };
