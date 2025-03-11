@@ -17,6 +17,6 @@ const decodedData = parser.bencodeDecode(buffer);
 //info
 //url-list
 
-console.log(decodedData.announce-list);
+console.log(decodedData[announce-list]);
 
 
