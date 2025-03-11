@@ -8,7 +8,7 @@ module.exports.Func = (torrent, callback) => {
     const socket = dgram.createSocket("udp4");
     const rawUrl = torrent.announce.toString("utf8");
 
-    udpSend(rawUrl, message, socket);
+    udpSend(rawUrl, buildConnReq(), socket);
 
     socket.on("message", (message) => {
         if (
