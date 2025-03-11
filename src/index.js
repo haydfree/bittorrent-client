@@ -6,4 +6,3 @@ const decodedTorrent = parser.decode(filePath);
 const encodedTorrent = parser.encode(decodedTorrent);
 
 console.log(decodedTorrent["url-list"].toString("utf8"));
-console.log(encodedTorrent);
