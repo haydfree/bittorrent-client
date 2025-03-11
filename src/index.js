@@ -9,6 +9,6 @@ const buffer = fs.readFileSync(filePath);
 const decodedData = parser.bencodeDecode(buffer);
 const keys = Object.keys(decodedData);
 
-keys.forEach(key => console.log(decodedData[key]));
+keys.forEach(key => console.log(key));
 
 
