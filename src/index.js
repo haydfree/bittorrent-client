@@ -1,6 +1,5 @@
 const tracker = require("./tracker");
 import parser from "parser";
-const parser = require("./parser");
 
 const filePath = "./big-buck-bunny.torrent"
 const torrent = parser.decode(filePath);
