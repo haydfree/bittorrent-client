@@ -46,7 +46,7 @@ function parseConnResp() {
         connectionId: resp.slice(8)
     }
 
-    return obj
+    return obj;
 }
 
 function buildAnnounceReq() {
