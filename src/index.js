@@ -7,5 +7,5 @@ const torrent = fs.readFileSync(filePath);
 const decodedTorrent = parser.decode(torrent);
 const encodedTorrent = parser.encode(decodedTorrent);
 
-const keys = Object.keys(torrent);
+const keys = Object.keys(decodedTorrent);
 keys.forEach(key => console.log(key));
