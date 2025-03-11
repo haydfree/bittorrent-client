@@ -7,6 +7,6 @@ const filePath = "./big-buck-bunny.torrent"
 const buffer = fs.readFileSync(filePath);
 
 const decodedData = parser.bencodeDecode(buffer);
-console.log(decodedData);
+console.log(decodedData.announce);
 
 
