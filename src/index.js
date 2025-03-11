@@ -8,3 +8,4 @@ const decodedTorrent = parser.decode(torrent);
 const encodedTorrent = parser.encode(decodedTorrent);
 
 const hash = parser.infoHash(decodedTorrent);
+console.log(hash);
