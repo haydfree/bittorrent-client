@@ -1,6 +1,5 @@
 import fs from "fs";
 import crypto from "crypto";
-
 import bencode from "bencode";
 
 module.exports.decode = (path) => {
